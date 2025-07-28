@@ -1,0 +1,192 @@
+/* General styles */
+body {
+    scroll-behavior: smooth;
+    background-color: #04153c;
+}
+.blue-text {
+    color:#1850d2;
+}
+.red-text {
+    color: #e73234;
+}
+.green-text {
+    color: #0ba43e;
+}
+.scrolltotop-btn {
+    z-index: 1100;
+    position: fixed;
+}
+/* Navbar section */
+.Search_btn {
+    color: #e73234;
+    border: 1px solid #e73234;
+    background-color: transparent;
+}
+.Search_btn:hover {
+    color: white;
+    background-color: #e73234;
+    border: 1px solid #e73234;
+}
+
+.navbar-nav > .nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e73234;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.dropdown :not(:hover)::before {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    pointer-events: auto;
+    z-index: 999;
+}
+.contact-bar {
+    background-color:#025b2a;
+    color:white;
+    padding:1rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.divider {
+    margin: auto 2rem;
+    width: 3px;
+    background-color: rgb(255, 255, 255); /* light white */
+}
+/* Intro Section */
+.Intro {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:white;
+}
+.Intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 47, 47, 0.4);
+    z-index: 1;
+}
+
+.Intro .IntroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(250px);
+    transition: transform 0.5s ease;
+    z-index: 2;
+    width: 90%;
+}
+
+.IntroContent {
+    position: fixed;
+    z-index: 800;
+    transition: transform 0.3s ease;
+}
+
+
+
+.Membership {
+    position: relative;
+    height: 100vh;
+    background-image: url("membership.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.Membership .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,     /* solid dark */
+    rgba(0, 0, 0, 0.6) 30%,     /* start fading */
+    rgba(0, 0, 0, 0.0) 60%,     /* fully transparent by 60% */
+    rgba(0, 0, 0, 0.0) 100%     /* remain transparent */
+  );
+  z-index: 1;
+}
+
+.Membership .container {
+    position: relative;
+    z-index: 2;
+}
+
+.Services {
+    background-color: #020c24;
+    color:white;
+}
+
+.service-card {
+    background-color: rgb(187, 224, 246);
+    transition: 0.3s ease-in-out;
+}
+.service-card:hover {
+    transform: scale(1.05)
+}
+
+
+.Price {
+    position: relative;
+    color:white;
+}
+.Price .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+    to right, 
+    #2b333d 0%,
+    #352329 30%,
+    #3c181c 60%,
+    #480607 100%
+    );
+}
+.Full-Membership {
+    background-color: #2b343e;
+}
+.Associate-Membership {
+    background-color: #1a1a20;
+}

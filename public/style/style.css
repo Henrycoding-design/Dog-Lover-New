@@ -1,0 +1,179 @@
+/* General styles */
+body {
+    scroll-behavior: smooth;
+}
+.blue-text {
+    color:#1850d2;
+}
+.red-text {
+    color: #e73234;
+}
+.green-text {
+    color: #0ba43e;
+}
+.scrolltotop-btn {
+    z-index: 1100;
+    position: fixed;
+}
+/* Navbar section */
+.Search_btn {
+    color: #e73234;
+    border: 1px solid #e73234;
+    background-color: transparent;
+}
+.Search_btn:hover {
+    color: white;
+    background-color: #e73234;
+    border: 1px solid #e73234;
+}
+
+.navbar-nav > .nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e73234;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.dropdown :not(:hover)::before {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    pointer-events: auto;
+    z-index: 999;
+}
+.contact-bar {
+    background-color:#025b2a;
+    color:white;
+    padding:1rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.divider {
+    margin: auto 2rem;
+    width: 3px;
+    background-color: rgb(255, 255, 255); /* light white */
+}
+/* Intro Section */
+.Intro {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:black;
+}
+.Intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(241, 238, 238, 0.4);
+    z-index: 1;
+}
+
+.Intro .IntroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(250px);
+    transition: transform 0.5s ease;
+    z-index: 2;
+    width: 90%;
+}
+
+.IntroContent {
+    position: fixed;
+    z-index: 800;
+    transition: transform 0.3s ease;
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin:0;
+    padding:50px 0 50px 0;
+    z-index: 999;
+    background-color: #fce5e5;
+    justify-content: center;
+    text-align: center;
+}
+.About h1, .About h2 {
+  color: #b02a2a;
+}
+.achievements {
+    background-color: #ffcc13;
+    padding: 30px;
+    border-radius: 15px;
+}
+.achievement-card {
+    transition: 0.3s ease-in-out;
+}
+.achievement-card:hover {
+    transform: scale(1.10);
+}
+
+
+.Story {
+    background-color: #db3f3f;
+    padding: 30px;
+    border-radius: 15px;
+}
+.Story h2 {
+    color: #fce5e5;
+}
+.story-card {
+    transition: 0.3s ease-in-out;
+}
+.story-card:hover {
+    transform: scale(1.05);
+}
+
+
+.Team {
+    background-color: #3fdbdb;
+    padding:30px;
+    border-radius:15px;
+}
+.Team h2 {
+    color: #00558a;
+}
+.team-card {
+    transition: 0.3s ease-in-out;
+}
+.team-card:hover {
+    transform: scale(1.08);
+}
+
